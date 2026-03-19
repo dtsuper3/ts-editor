@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+</head>
+<body>
+    <div class="toolbar">
+        <div class="toolbar-left">
+            <select id="languageSelect">
+                <option value="javascript">JavaScript</option>
+                <option value="typescript">TypeScript</option>
+            </select>
+            <button id="runBtn" class="btn btn-primary">Run</button>
+            <button id="clearBtn" class="btn">Clear</button>
+        </div>
+        <div class="toolbar-right">
+            <span id="transpileStatus"></span>
+            <button id="themeToggle" class="btn btn-icon" title="Toggle Theme">🌙</button>
+        </div>
+    </div>
+    <div class="editor-container">
+        <div class="editor-pane">
+            <div class="pane-header">Editor</div>
+            <textarea id="codeEditor"></textarea>
+        </div>
+        <div class="resizer"></div>
+        <div class="output-pane">
+            <div class="pane-header">Output</div>
+            <div id="output"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typescript@5.3.3/lib/typescript.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
